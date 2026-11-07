@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Responsif Tunggal</title>
+    <style>
+        /* --- KODE CSS RESPONSIF --- */
+        
+        /* Merapikan layout halaman */
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+
+        /* Wadah video untuk membatasi ukuran maksimal di layar monitor besar */
+        .video-container {
+            width: 100%;
+            max-width: 800px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Inti responsivitas: video mengikuti lebar wadah tanpa merusak rasio gambar */
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- PENAMPILAN VIDEO --- -->
+    <div class="video-container">
+        <video controls>
+            <source src="video-kamu.mp4" type="video/mp4">
+            Browser Anda tidak mendukung pemutar video HTML5.
+        </video>
+    </div>
+
+</body>
+</html>
